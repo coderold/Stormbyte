@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import WeatherCard from './Components'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -24,15 +25,18 @@ function App() {
     //   </p>
     // </div>
 
-    <div className='min-h-screen dark:bg-bgdDark flex flex-col justify-center items-center gap-4 transition-all ease-in-out'>
-      <h2 className='text-textLight bg-primary/40 px-4 rounded-2xl'>
+    <div className='min-h-screen bg-gradient-to-tr from-primary to-secondary
+     dark:bg-gradient-to-tr dark:from-bgdDark dark:to-accentDark flex flex-col justify-center items-center gap-4 transition-all ease-in-out'>
+      <h2 className='text-textLight bg-primary/40 dark:text-textDark dark:bg-primaryDark/40 px-4 rounded-2xl'>
         🌤️Stormbyte
       </h2>
 
-      <button className='bg-secondary px-6 rounded-2xl text-textLight text-textMd hover:bg-accent'
+      <button className='bg-secondary text-textLight  dark:bg-secondaryDark  dark:text-textDark
+      px-6 rounded-2xl text-textMd hover:bg-accent'
               onClick={toggleTheme}>
         {theme === 'light'? 'LightMode' : 'DarkMode'}
         </button>
+        <WeatherCard/>
     </div>
   )
 }
