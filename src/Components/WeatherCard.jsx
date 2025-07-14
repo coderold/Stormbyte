@@ -4,7 +4,8 @@ function WeatherCard() {
     const [weather, setWeather] = useState(null);
 
     useEffect( ()=> {
-        const apiKey = "d8a2cdfbb7c94ff39a3105131251307";
+        //const apiKey = "d8a2cdfbb7c94ff39a3105131251307";
+        const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
         const city = "Manila";
         const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
@@ -19,8 +20,7 @@ function WeatherCard() {
     if (!weather) return <p className="text-white">Loading weather...</p>;
 
   return (
-    <div className="text-white">
-      <div className="text-textLight dark:text-textDark">
+    <div className="text-textLight dark:text-textDark bg-primary px-4 pt-4 rounded-2xl">
         <h1 className="text-3xl font-bold mb-2">{weather.location.name}</h1>
         <p className="text-xl">{weather.current.temp_c}°C</p>
         <p className="capitalize">{weather.current.condition.text}</p>
@@ -30,7 +30,6 @@ function WeatherCard() {
           className="mx-auto mt-2"
         />
       </div>
-    </div>
   )
 }
 
