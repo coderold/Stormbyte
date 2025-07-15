@@ -4,10 +4,12 @@ function WeatherCard() {
     const [weather, setWeather] = useState(null);
 
     useEffect( ()=> {
-        //const apiKey = "d8a2cdfbb7c94ff39a3105131251307";
-        const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+        //const apiKey = import.meta.env.REACT_APP_WEATHER_API_KEY;
+        const apiKey = "d8a2cdfbb7c94ff39a3105131251307";
         const city = "Manila";
         const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+
+        console.log(apiKey);
 
         fetch(url)
         .then((res) => res.json())

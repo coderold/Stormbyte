@@ -1,2 +1,4 @@
-import WeatherCard from './WeatherCard.jsx';
-export default WeatherCard;
+import WeatherCard from "./WeatherCard";
+import Navbar from "./Navbar";
+
+export { Navbar, WeatherCard };
