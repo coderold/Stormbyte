@@ -17,9 +17,10 @@ function Navbar() {
             <h3>
                 🌤️Stormbyte
             </h3>
-            <button className='bg-secondary text-textLight  dark:bg-secondaryDark  dark:text-textDark
-                                    px-6 rounded-2xl text-textMd hover:bg-accent'
-              onClick={toggleTheme}>
+            <button 
+            className='bg-secondary text-textLight  dark:bg-secondaryDark  dark:text-textDark
+                          px-4 rounded-4xl text-textMd hover:bg-accent'
+            onClick={toggleTheme}>
         {theme === 'light'? '☀️' : '🌙'}
         </button>
         </div>

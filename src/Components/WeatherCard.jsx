@@ -20,18 +20,33 @@ function WeatherCard() {
     }, []);
 
     if (!weather) return <p className="text-white">Loading weather...</p>;
+    
+    var weatherImg = "https:" + weather.current.condition.icon
 
   return (
-    <div className="text-textLight dark:text-textDark bg-primary px-4 pt-4 rounded-2xl">
-        <h1 className="text-3xl font-bold mb-2">{weather.location.name}</h1>
-        <p className="text-xl">{weather.current.temp_c}°C</p>
-        <p className="capitalize">{weather.current.condition.text}</p>
-        <img
-          src={`https:${weather.current.condition.icon}`}
-          alt={weather.current.condition.text}
-          className="mx-auto mt-2"
-        />
+    <>
+      <div className='flex flex-col items-center bg-secondary/40 px-6 rounded-2xl text-textLight
+      dark:text-textDark'>
+          <div className='flex flex-col items-center md:flex-row md:items-center'>
+
+            <div className='px-6'>
+              <h2 className='font-bold'>{weather.location.name}</h2>
+              <h4 className='p-0 m-0'>{weather.current.temp_c}</h4>
+            </div>
+
+          <div className='pb-5'>
+            <img src={weatherImg} alt="asdas" className='size-36'/>
+          </div>
+
+        </div>
+
+        <div className='pb-5'>
+            <h3>{weather.current.condition.text}</h3>
+        </div>
+
       </div>
+    </>
+    
   )
 }
 
