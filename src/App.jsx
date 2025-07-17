@@ -1,4 +1,4 @@
-import { Navbar, WeatherCard }from './Components'
+import { AdsterraAd, Navbar, WeatherCard }from './Components'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -14,6 +14,7 @@ function App() {
       align-top items-center gap-4 transition-all ease-in-out'>
         <WeatherCard/>
     </div>
+    <AdsterraAd/>
     </>
     
   )
