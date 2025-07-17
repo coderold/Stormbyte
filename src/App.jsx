@@ -11,7 +11,7 @@ function App() {
     <>
     <Navbar/>
     <div className='min-h-screen bg-bgLight dark:bg-bgdDark flex flex-col     
-      justify-center items-center gap-4 transition-all ease-in-out'>
+      align-top items-center gap-4 transition-all ease-in-out'>
         <WeatherCard/>
     </div>
     </>

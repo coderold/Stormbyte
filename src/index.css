@@ -57,4 +57,8 @@
   }
 }
 
+.border-hairline{
+  border-bottom: 0.2px solid;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));

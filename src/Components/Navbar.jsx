@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     <div>
-      <nav className='bg-primary/50 text-textLight dark:text-textDark px-4 py-3 shadow-md'>
+      <nav className='bg-bgLight text-textLight dark:bg-bgdDark dark:text-textDark px-4 py-3 border-b border-b-gray-400 dark:border-b-secondary shadow-2xl'>
         <div className='flex justify-between'>
             <h3>
                 🌤️Stormbyte

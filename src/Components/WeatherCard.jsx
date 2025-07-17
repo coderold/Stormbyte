@@ -25,11 +25,11 @@ function WeatherCard() {
 
   return (
     <>
-      <div className='flex flex-col items-center bg-secondary/40 px-6 rounded-2xl text-textLight
+      <div className='flex flex-col items-center bg-secondary/40 px-6 my-5 rounded-2xl text-textLight
       dark:text-textDark'>
-          <div className='flex flex-col items-center md:flex-row md:items-center'>
+          <div className='flex flex-col md:flex-row items-center'>
 
-            <div className='px-6'>
+            <div className='flex flex-col items-center md:items-start px-6 '>
               <h2 className='font-bold'>{weather.location.name}</h2>
               <h4 className='p-0 m-0'>{weather.current.temp_c}</h4>
             </div>
